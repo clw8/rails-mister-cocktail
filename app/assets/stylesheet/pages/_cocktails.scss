@@ -1,0 +1,82 @@
+// Place all the styles related to the Cocktails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+h1{
+  font-size: 48px;
+  font-family: 'Fredericka the Great', cursive;
+
+}
+
+
+.cocktail-background{
+  background-image: url('https://images.unsplash.com/photo-1444728399417-08d2aa39e6f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75d09107dd70d0e844460c45024ca3c&auto=format&fit=crop&w=1050&q=80');
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0,0,0, 0),
+    rgba(0,0,0, 100)
+  ), url('https://images.unsplash.com/photo-1444728399417-08d2aa39e6f4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a75d09107dd70d0e844460c45024ca3c&auto=format&fit=crop&w=1050&q=80');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 6px;
+}
+
+.cocktail-card{
+  height: 320px;
+  margin-top: 20px;
+  opacity: 0.8;
+  color: black;
+
+  &:hover{
+    opacity: 0.9;
+  }
+
+--card-padding: 15px;
+
+  .cocktail-card-top{
+    padding-left: var(--card-padding);
+    height: 200px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 3px 3px 0px 0px;
+
+    .cocktail-name{
+      // position: absolute;
+      // top: 10px;
+      // left: 10px;
+      padding-top: 5px;
+      font-size: 24px;
+      font-family: 'Fredericka the Great', cursive;
+    }
+    .cocktail-ingredients{
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      margin-top: 10px;
+      font-size: 16px;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-end;
+      ul{
+        padding-left: var(--card-padding);
+        margin-bottom: 5px;
+      }
+      p{
+        display: inline-block;
+      }
+    }
+  }
+  .cocktail-card-bottom{
+    padding-left: 15px;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 0px 0px 3px 3px;
+    min-height: 80px;
+    display: flex;
+  }
+}
+
+.cocktail-description{
+  padding: 5px 0px;
+  font-style: italic;
+  font-size: 14px;
+}

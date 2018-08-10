@@ -1,0 +1,22 @@
+#cocktail_ingredients_container{
+  display: flex;
+  .cocktail_ingredients{
+  }
+  .dose_ingredient_id_container{
+    margin-left: 15px;
+    label{
+      display: block;
+    }
+  }
+  .ingredient_submit{
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    }
+}
+
+#ingredient_list_for_new_c{
+  li{
+    list-style: none;
+  }
+}

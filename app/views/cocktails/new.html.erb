@@ -1,0 +1,28 @@
+<div class="container">
+  <%= simple_form_for @cocktail do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <h4>Select your ingredients:</h4>
+  <ul id="ingredient_list_for_new_c">
+
+  </ul>
+  <div id="cocktail_ingredients_container">
+    <%= f.input :ingredients, collection: @ingredients, selected: 0, label: "Ingredient"  %>
+    <%= hidden_field_tag 'dose_ingredient_id' %>
+
+    <div class="dose_ingredient_id_container">
+      <%= label_tag(:ingredient_amount, "Amount") %>
+      <%= text_field_tag(:amount) %>
+      <%= hidden_field_tag 'dose_description' %>
+
+    </div>
+    <div class="ingredient_submit">
+      <%= f.button :submit, "Add Ingredient", class: 'btn btn-primary' %>
+    </div>
+  </div>
+
+  <%= f.input :image, label: 'Image Url' %>
+  <%= f.button :submit %>
+  <% end %>
+
+</div>

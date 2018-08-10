@@ -1,0 +1,24 @@
+<% @cocktails.each do |c| %>
+<%= link_to cocktail_path(c) do %>
+<div class="col-sm-4">
+  <div class="cocktail-card">
+
+    <div class="cocktail-card-top" style="background-image: url(<%= c.image %>)">
+      <div class="cocktail-name"><%= c.name.upcase %></div>
+      <div class="cocktail-ingredients">
+        <ul>
+          <% c.ingredients.each do |i| %>
+          <li><%= i.name %></li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <div class="cocktail-card-bottom">
+      <div class="cocktail-description"><%= c.description %></div>
+    </div>
+
+  </div>
+</div>
+<% end %>
+<% end %>

@@ -1,0 +1,36 @@
+.form-dropdown{
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.8s ease;
+  position: relative;
+}
+
+.form-dropdown-open{
+  max-height: 350px;
+}
+
+.dropdown-open-button, .dropdown-close-button{
+  font-size: 24px;
+  font-family: monospace;
+  cursor: pointer;
+  color: #50A0BA;
+  line-height: 0;
+}
+
+.dropdown-close{
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+
+.button-container-dropdown{
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+}
+
+.dropdown-btn-text{
+  margin: 0px 8px;
+  font-size: 12px;
+}

@@ -1,0 +1,54 @@
+/* Main navbar */
+header {
+  box-shadow: 0 1px 5px 0 rgba(0,0,0,0.07),0 1px 0 0 rgba(0,0,0,0.03);
+  background: white;
+  transition: all 0.3s ease;
+  height: 90px;
+  padding: 0px 30px;
+  margin-bottom: 50px;
+}
+
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.nav-left{
+  display: flex;
+  padding-top: 10px;
+  .logo-circle{
+    background-image: asset-url('shamrock-juice-inside.jpg');
+    height: 70px;
+    width: 70px;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+  }
+  h1{
+    margin-top: 10px;
+    margin-right: 20px;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+
+}
+
+/* Right section */
+.nav-right {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  a{
+    color: #ffffff;
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
