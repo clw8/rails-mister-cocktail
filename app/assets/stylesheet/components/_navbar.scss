@@ -33,6 +33,7 @@ nav{
   h1{
     margin-top: 10px;
     margin-right: 20px;
+    display: inline-block;
     &:hover{
       text-decoration: none;
     }
@@ -50,5 +51,22 @@ nav{
     &:hover{
       text-decoration: none;
     }
+  }
+}
+
+@media(max-width:650px){
+  .nav-left{
+    align-items: center;
+    h1{
+      font-size: 34px;
+    }
+    .logo-circle{
+      height: 40px;
+      width: 40px;
+      margin-right: 0px;
+    }
+  }
+  header{
+    padding: 0px;
   }
 }
