@@ -21,7 +21,8 @@
     </div>
   </div>
 
-  <%= f.input :image, label: 'Image Url' %>
+  <%= f.input :image %>
+  <%= f.input :image_cache, as: :hidden %>
   <%= f.button :submit %>
   <% end %>
 

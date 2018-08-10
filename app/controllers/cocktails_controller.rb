@@ -20,24 +20,24 @@ class CocktailsController < ApplicationController
 
   def create
     new_prm = params_new_cocktail
-    dose_description_arr = new_prm[:dose_description].split('$%')
     @cocktail = Cocktail.new(
       name: new_prm[:name],
       image: new_prm[:image],
       description: new_prm[:description]
     )
     if @cocktail.valid?
+      dose_description_arr = new_prm[:dose_description].split('$%')
+      @cocktail.save
       new_prm[:dose_ingredient_id].split(',').each_with_index do |id, index|
-        dose = Dose.new(
-          cocktail_id: Cocktail.last.id,
+        @dose = Dose.new(
+          cocktail_id: @cocktail.id,
           ingredient_id: id,
           description: dose_description_arr[index]
         )
-        if dose.valid?
-          dose.save
+        if @dose.valid?
+          @dose.save
         end
       end
-
       redirect_to cocktail_path(@cocktail)
     else
       @ingredients = Ingredient.all
@@ -54,7 +54,7 @@ class CocktailsController < ApplicationController
   private
 
   def params_update_cocktail
-    params.require(:cocktail).permit(:name, :description)
+    params.require(:cocktail).permit(:name, :description, :image)
   end
 
   def params_new_cocktail
