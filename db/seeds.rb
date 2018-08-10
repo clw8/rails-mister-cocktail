@@ -16,6 +16,6 @@ ingredients_hash["drinks"].each do |ing|
 end
 
 
-Cocktail.create(name: 'Martini', image: "https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg")
+Cocktail.create(name: 'Martini', description: "The martini is a cocktail made with gin and vermouth, and garnished with an olive or a lemon twist.", image: "https://www.thecocktaildb.com/images/media/drink/71t8581504353095.jpg")
 Dose.create(cocktail_id: 1, ingredient_id: 3, description: "60ml")
 Dose.create(cocktail_id: 1, ingredient_id: 107, description: "1 tbsp")
