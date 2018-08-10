@@ -13,7 +13,6 @@ class CocktailsController < ApplicationController
 
   def new
     @cocktail = Cocktail.new
-    @cocktail.id = Cocktail.last.id + 1
     @ingredients = Ingredient.all
     @dose = Dose.new
   end
