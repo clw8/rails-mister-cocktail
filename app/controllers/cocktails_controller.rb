@@ -1,6 +1,7 @@
 class CocktailsController < ApplicationController
   def index
-    @cocktails = Cocktail.all
+    cocktails = Cocktail.all
+    @cocktails = cocktails.each_slice(6).to_a
   end
 
   def show

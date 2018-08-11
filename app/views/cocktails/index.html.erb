@@ -1,9 +1,13 @@
 <div class="container">
-
+<div class="black-bg">
+  <% @cocktails.each do |c_arr|
+  @c_arr = c_arr %>
   <div class="row cocktail-background">
-  <%= render 'layouts/cocktail_card'  %>
+    <%= render 'layouts/cocktail_card'  %>
   </div>
+  <% end %>
 
+</div>
 
 </div>
 
